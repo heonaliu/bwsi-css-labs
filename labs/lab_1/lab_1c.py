@@ -5,13 +5,16 @@ Given a list of numbers, return the maximum sum of any contiguous subarray of th
 
 Do not assume anything. Account for all edge cases.
 
-Derived from LeetCode problem: https://leetcode.com/problems/maximum-subarray/ (leetcode medium)
+Derived from LeetCode problem:
+ https://leetcode.com/problems/maximum-subarray/ (leetcode medium)
 """
 
-# TODO: Find and resolve the bug in the following implementation. Create unit tests to verify your fix.
+# TODO: Find and resolve the bug in the following implementation. 
+# Create unit tests to verify your fix.
 def max_subarray_sum(nums: list[int]) -> int:
     """
-    Function that takes in a list of integers and returns the maximum sum of any contiguous subarray.
+    Function that takes in a list of integers 
+    and returns the maximum sum of any contiguous subarray.
 
     Args:
         nums (list[int]): List of integers.
