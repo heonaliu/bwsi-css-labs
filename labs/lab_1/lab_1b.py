@@ -1,7 +1,8 @@
 """
 lab_1b.py
 
-This is a script that implements a simple calculator. It takes two numbers and an operation,
+This is a script that implements 
+a simple calculator. It takes two numbers and an operation,
 then performs the operation and returns the result. 
 
 The script asks the user to input the numbers and the operation to be performed,
@@ -9,13 +10,20 @@ and prints the result to the terminal window.
 
 """
 
-def simple_calculator(operation: str, num1: float, num2: float) -> float:
+def simple_calculator(
+        operation: str, 
+        num1: float, 
+        num2: float
+        ) -> float:
     """
-    Function that takes in two numbers and an operation (add, subtract, multiply, divide),
-    then performs the operation on the two numbers and returns the result.
+    Function that takes in two numbers and 
+    an operation (add, subtract, multiply, divide),
+    then performs the operation on the two numbers 
+    and returns the result.
 
     Args:
-        operation (str): The operation to perform ("add", "subtract", "multiply", "divide").
+        operation (str): The operation to perform 
+        ("add", "subtract", "multiply", "divide").
         num1 (float): The first number.
         num2 (float): The second number.
 
@@ -35,7 +43,11 @@ def simple_calculator(operation: str, num1: float, num2: float) -> float:
         else:
             raise ValueError("Cannot divide by zero.")
     else:
-        raise ValueError("Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'.")
+        raise ValueError(
+            "Invalid operation. " \
+            "Please choose from " \
+            "'add', 'subtract', 'multiply', or 'divide'."
+            )
 
 def main():
     def req_sanitized_number(prompt: str) -> float:
@@ -50,16 +62,23 @@ def main():
         while True:
             try:
                 op = input(prompt)
-                if op == "add" or op == "subtract" or op == "multiply" or op == "divide" :
+                if (op == "add" 
+                    or op == "subtract" 
+                    or op == "multiply" 
+                    or op == "divide") :
                     return op
             except ValueError:
-                print("Invalid input. Please enter valid operation.")
-    print(f"===== Simple Calculator =====")
+                print(
+                    "Invalid input. Please enter valid operation."
+                    )
+    print("===== Simple Calculator =====")
 
     # Ask the user for sample input    
     num1 = req_sanitized_number("Enter the first number: ")
     num2 = req_sanitized_number("Enter the second number: ")
-    operation = req_sanitized_op("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
+    operation = req_sanitized_op(
+        "Enter the operation (add, subtract, multiply, divide): "
+        ).strip().lower()
 
     # Perform the calculation and display the result
     result = simple_calculator(operation, num1, num2)
